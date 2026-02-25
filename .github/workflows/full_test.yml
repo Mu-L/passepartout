@@ -22,8 +22,6 @@ jobs:
           node-version: 20
           cache: npm
           cache-dependency-path: api/package-lock.json
-      - run: |
-          ci/fetch-swon.sh
       - name: Run shared tests
         run: |
           ci/run-shared-tests.sh
