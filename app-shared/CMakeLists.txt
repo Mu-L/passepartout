@@ -18,7 +18,7 @@ set(PP_BUILD_OUTPUT ${OUTPUT_DIR})
 set(PP_BUILD_LIBRARY ON)
 set(PP_BUILD_USE_OPENSSL ON)
 set(PP_BUILD_USE_WGGO ON)
-add_subdirectory(partout)
+add_subdirectory(../submodules/partout partout)
 
 # Set exclusions and symbols for non-Apple builds
 if(NOT APPLE)
