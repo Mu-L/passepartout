@@ -1,1 +1,2 @@
-* Update Partout with SWON and better CMake layout (#1698)
+* Fix unscrollable license content (#1703)
+* Hide sharing buttons if no support for paid features
