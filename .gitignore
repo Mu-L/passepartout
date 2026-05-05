@@ -19,3 +19,4 @@ tmp/
 *.dmg
 .cmake*
 bin
+package-lock.json
