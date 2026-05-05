@@ -159,7 +159,7 @@ private extension ABI.AppPreferenceValues.Experimental {
 // MARK: - Localization
 
 private extension ABI.ConfigFlag {
-    public var localizedDescription: String {
+    var localizedDescription: String {
         switch self {
         case .bsdSockets:
             return "BSD sockets"
