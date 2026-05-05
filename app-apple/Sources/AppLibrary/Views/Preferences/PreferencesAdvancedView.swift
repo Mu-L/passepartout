@@ -160,19 +160,7 @@ private extension ABI.AppPreferenceValues.Experimental {
 
 private extension ABI.ConfigFlag {
     var localizedDescription: String {
-        switch self {
-        case .bsdSockets:
-            return "BSD sockets"
-        case .newProfileEncoding:
-            return "New profile encoding"
-        case .ovpnCrossV2:
-            return "Cross-platform OpenVPN v2"
-        case .wgCrossV2:
-            return "Cross-platform WireGuard v2"
-        default:
-            assertionFailure()
-            return ""
-        }
+        rawValue
     }
 }
 
