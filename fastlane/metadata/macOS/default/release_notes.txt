@@ -1,1 +1,1 @@
-* Fix retain cycles in for await loops (#1790)
+* OpenVPN: Fix potential infinite loops on disconnection
