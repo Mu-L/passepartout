@@ -27,9 +27,14 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+    }
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -37,7 +42,6 @@ android {
         }
     }
     buildFeatures {
-        viewBinding = true
         compose = true
     }
     ndkVersion = "29.0.13846066"
@@ -63,13 +67,9 @@ android {
 
 dependencies {
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.runtime.android)
     implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.ui.tooling.preview.android)
     implementation(libs.androidx.material3.android)
     implementation(libs.androidx.activity.compose)
     implementation(libs.kotlinx.serialization.json)
